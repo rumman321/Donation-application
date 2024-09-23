@@ -7,18 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header class=" bg-[#F9F7F3]">
+<body >
+    <header class=" bg-[#F9F7F3] fixed top-0 left-0 right-0 z-10">
         <div class="navbar bg-base-100 w-10/12 mx-auto bg-[#F9F7F3]">
             <div class="navbar-start">
                 <a class="btn md:text-2xl text-lg bg-[#B4F461]" href="./blog.html" target="_blank">Blog</a> 
               
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-center ">
               <ul class="menu menu-horizontal px-1 items-center">
                 <li><img src="./assets/logo.png" alt=""></li>
                 
-                <li><a class="font-bold text-2xl">Donate Bangladesh</a></li>
+                <li><a class="font-bold text-2xl hidden lg:flex">Donate Bangladesh</a></li>
               </ul>
             </div>
             <div class="navbar-end">
@@ -27,24 +27,27 @@
                   </p>
             </div>
           </div>
-    </header>
-
-    <main class="w-10/12 mx-auto space-y-10">
+        
         <!-- donation and history btn -->
-        <div class="flex justify-center gap-5 mb-6">
-            <button
-              id="Donation-tab"
-              class=" px-6 py-2 font-bold border rounded-md  bg-[#B4F461] text-black"
-            >
-              Donation
-            </button>
-            <button
-              id="history-tab"
-              class=" px-6 py-2  border rounded-md "
-            >
-              History
-            </button>
-          </div>
+     <div class="flex justify-center gap-5 mb-6">
+        <button
+          id="Donation-tab"
+          class=" px-6 py-2 font-bold border rounded-md  bg-[#B4F461] text-black"
+        >
+          Donation
+        </button>
+        <button
+          id="history-tab"
+          class=" px-6 py-2  border rounded-md "
+        >
+          History
+        </button>
+      </div>  
+    </header>
+     
+
+    <main class="w-10/12 mx-auto space-y-10 mt-48 " id="donation-body">
+       
         <!-- card 1 -->
         <div class="hero bg-base-200 border border-gray-300 rounded-2xl ">
             <div class="hero-content flex-col lg:flex-row items-center justify-center">
@@ -133,7 +136,20 @@
               
             </div>
           </div>
+
+          
+   
+          
     </main>
+    <footer class="w-4/6 mx-auto mt-48">
+       <!-- history show  -->
+          <div id="history-section" class=" bg-gradient-to-br hidden from-blue-50 to-purple-50 p-4 rounded-lg shadow-md border border-blue-200 ">
+            
+            <div id="history-list" class="grid grid-cols-1 gap-4 space-y-5">
+
+            </div>
+          </div>
+    </footer>
 
     <script src="./index.js"></script>
 </body>

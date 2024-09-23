@@ -12,11 +12,20 @@ document.getElementById('donate-btn1')
     const totalAmount=amount-amount1
     document.getElementById('total-donation').innerText=totalAmount.toFixed(2)
     document.getElementById('donate-amount1').value=''
+
+           // history item
+           const historyItem=document.createElement('div')
+           historyItem.className="bg-white p-3 rounded-xl  border-1 border-red-500"
+           historyItem.innerHTML=`
+           <p class="text-2xl text-black font-bold"> ${collection.toFixed(2)} tk Donate for Flood at Noakhali, Bangladesh</p>
+           <p class="text-xl text-black">${new Date().toLocaleDateString()}</p>
+           `
+           document.getElementById('history-list').appendChild(historyItem)
     
 
     }
     else{
-        alert('You Can Donate Only Positive')
+        alert('You Can Donate Only Positive Number')
     }
     
 })
@@ -32,9 +41,18 @@ document.getElementById('donate-btn2')
         const totalAmount=amount-amount1
         document.getElementById('total-donation').innerText=totalAmount.toFixed(2)
         document.getElementById('donate-amount2').value=''
+
+        // history item
+        const historyItem=document.createElement('div')
+        historyItem.className="bg-white p-3 rounded-xl  border-1 border-red-500"
+        historyItem.innerHTML=`
+        <p class="text-2xl text-black font-bold"> ${collection.toFixed(2)} tk Donate for Flood at Feni, Bangladesh</p>
+        <p class="text-xl text-black">${new Date().toLocaleDateString()}</p>
+        `
+        document.getElementById('history-list').appendChild(historyItem)
     }
     else{
-        alert('You Can Donate Only Positive')
+        alert('You Can Donate Only Positive Number')
     }
     
 })
@@ -50,9 +68,18 @@ document.getElementById('donate-btn3')
         const totalAmount=amount-amount1
         document.getElementById('total-donation').innerText=totalAmount.toFixed(2)
         document.getElementById('donate-amount3').value=''
+
+        // history item
+        const historyItem=document.createElement('div')
+        historyItem.className="bg-white p-3 rounded-xl  border-1 border-red-500"
+        historyItem.innerHTML=`
+        <p class="text-2xl text-black font-bold"> ${collection.toFixed(2)} tk Donate for Injured in the Quota Movement, Bangladesh</p>
+        <p class="text-xl text-black">${new Date().toLocaleDateString()}</p>
+        `
+        document.getElementById('history-list').appendChild(historyItem)
     }
     else{
-        alert('You Can Donate Only Positive ')
+        alert('You Can Donate Only Positive Number')
     }
     
 })
@@ -64,6 +91,10 @@ document.getElementById('donate-btn3')
 
     document.getElementById('history-tab').classList.add('bg-[#B4F461]','font-bold','text-black')
     document.getElementById('Donation-tab').classList.remove('bg-[#B4F461]','font-bold','text-black')
+    document.getElementById('donation-body').classList.add('hidden')
+    document.getElementById('history-section').classList.remove('hidden')
+    
+    
     
 })
 // donation-tab functionally
@@ -73,5 +104,8 @@ document.getElementById('donate-btn3')
 
     document.getElementById('Donation-tab').classList.add('bg-[#B4F461]','font-bold','text-black')
     document.getElementById('history-tab').classList.remove('bg-[#B4F461]','font-bold','text-black')
+    document.getElementById('donation-body').classList.remove('hidden')
+    document.getElementById('history-section').classList.add('hidden')
+    
     
 })
