@@ -5,7 +5,7 @@ document.getElementById('donate-btn1')
     const amount=parseFloat(document.getElementById('total-donation').innerText)
     const donate=parseFloat(document.getElementById('Noakhali').innerText)
    
-    if(amount1>=0){
+    if(amount1>0 && amount1 <= amount){
     
     const collection=donate+amount1
     document.getElementById('Noakhali').innerText=collection.toFixed(2)
@@ -26,7 +26,7 @@ document.getElementById('donate-btn1')
 
     }
     else{
-        alert('You Can Donate Only Positive Number')
+        alert('Invalid Input or Insufficient Balance')
     }
     
 })
@@ -36,7 +36,7 @@ document.getElementById('donate-btn2')
     const amount1=parseFloat(document.getElementById('donate-amount2').value)
     const amount=parseFloat(document.getElementById('total-donation').innerText)
     const donate=parseFloat(document.getElementById('Feni').innerText)
-    if(amount1>=0){
+    if(amount1>0 && amount1 <= amount){
         const collection=donate+amount1
         document.getElementById('Feni').innerText=collection.toFixed(2)
         const totalAmount=amount-amount1
@@ -53,7 +53,7 @@ document.getElementById('donate-btn2')
         document.getElementById('history-list').appendChild(historyItem)
     }
     else{
-        alert('You Can Donate Only Positive Number')
+        alert('Invalid Input or Insufficient Balance')
     }
     
 })
@@ -63,7 +63,7 @@ document.getElementById('donate-btn3')
     const amount1=parseFloat(document.getElementById('donate-amount3').value)
     const amount=parseFloat(document.getElementById('total-donation').innerText)
     const donate=parseFloat(document.getElementById('Quota').innerText)
-    if(amount1>=0){
+    if(amount1>0 && amount1 <= amount){
         const collection=donate+amount1
         document.getElementById('Quota').innerText=collection.toFixed(2)
         const totalAmount=amount-amount1
@@ -80,7 +80,7 @@ document.getElementById('donate-btn3')
         document.getElementById('history-list').appendChild(historyItem)
     }
     else{
-        alert('You Can Donate Only Positive Number')
+        alert('Invalid Input or Insufficient Balance')
     }
     
 })
