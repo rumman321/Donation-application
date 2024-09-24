@@ -19,7 +19,9 @@ document.getElementById('donate-btn1')
            historyItem.className="bg-white p-3 rounded-xl  border-1 border-red-500"
            historyItem.innerHTML=`
            <p class="text-2xl text-black font-bold"> ${amount1.toFixed(2)} tk Donate for Flood at Noakhali, Bangladesh</p>
-           <p class="text-xl text-black">${new Date().toLocaleDateString()}</p>
+           <p class="text-xl text-black"> Date : ${new Date().toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'   
+        })} +0600(Bangladesh Standard Time)
+        </p>
            `
            document.getElementById('history-list').appendChild(historyItem)
     
@@ -48,7 +50,9 @@ document.getElementById('donate-btn2')
         historyItem.className="bg-white p-3 rounded-xl  border-1 border-red-500"
         historyItem.innerHTML=`
         <p class="text-2xl text-black font-bold"> ${amount1.toFixed(2)} tk Donate for Flood at Feni, Bangladesh</p>
-        <p class="text-xl text-black">${new Date().toLocaleDateString()}</p>
+        <p class="text-xl text-black"> Date : ${new Date().toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'   
+        })} +0600(Bangladesh Standard Time)
+        </p>
         `
         document.getElementById('history-list').appendChild(historyItem)
     }
@@ -75,7 +79,10 @@ document.getElementById('donate-btn3')
         historyItem.className="bg-white p-3 rounded-xl  border-1 border-red-500"
         historyItem.innerHTML=`
         <p class="text-2xl text-black font-bold"> ${amount1.toFixed(2)} tk Donate for Injured in the Quota Movement, Bangladesh</p>
-        <p class="text-xl text-black">${new Date().toLocaleDateString()}</p>
+        
+        <p class="text-xl text-black"> Date : ${new Date().toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'   
+        })} +0600(Bangladesh Standard Time)
+        </p>
         `
         document.getElementById('history-list').appendChild(historyItem)
     }
